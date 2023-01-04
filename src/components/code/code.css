@@ -1,0 +1,80 @@
+html {
+  font-size: 10px;
+  background-color:rgb(148, 216, 255);
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keyboard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.keys {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  display:flex;
+  border: .4rem solid black;
+  border-radius: 12px;
+  margin: 2rem;
+  transition: all .1s ease;
+  width: 7rem;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+  box-shadow: 0 0 1rem #1d1d1d;
+}
+
+.highlight {
+  transform: scale(1.5);
+  border-color: #00a2ff;
+  box-shadow: 0 0 1rem #00a2ff;
+}
+
+.keypress {
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  color: #ffffff;
+}
+
+.enter {
+  width: 10rem;
+}
+
+.image-container {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  position: fixed;
+  width: 1000px;
+  margin-top: 70px;
+}
+
+.secret {
+  display: flex;
+  justify-content: center;
+  flex:1;
+  width:100%;
+}
+#ship {
+  position: fixed;
+  width: 1440px;
+  bottom: 20px;
+}
