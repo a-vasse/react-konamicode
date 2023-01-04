@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./code.css";
-import After from "../../assets/after.png";
-import Before from "../../assets/before.png";
 import KonamiWav from "../../assets/konami.wav";
+import Before from "../../assets/before.png"
+import After from "../../assets/after.png"
 import Logo from "../../assets/logo.png";
 
 const Code = () => {
   const pressed = [];
   const secretCode = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter';
   let correct = true;
+  const [image, setImage] = useState(`${Before}`);
 
   window.addEventListener('keydown', (event) => {
     const secret = document.querySelector('.secret');
@@ -18,8 +19,8 @@ const Code = () => {
       let jingle = new Audio({KonamiWav});
       jingle.play();
       correct = false;
+      setImage(`${After}`);
       secret.innerHTML =`<img src=${Logo} class="logo" alt=""></img>`
-      document.getElementById("ship").src = {After}
     }
     console.log(pressed.join(''))
   });
@@ -54,7 +55,7 @@ const Code = () => {
     </div>
     <div class="image-container">
       <div class="secret"></div>
-      <img src={Before} id="ship" alt=""></img>
+      <img src={image} class="ship" alt=""></img>
     </div>
   </section>
   );
