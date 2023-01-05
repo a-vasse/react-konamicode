@@ -25,6 +25,7 @@ const Code = () => {
     console.log(pressed.join(''))
   });
 
+
   function removeTransition(event) {
     if (event.propertyName !== 'transform') return;
     this.classList.remove('highlight');
@@ -43,21 +44,21 @@ const Code = () => {
   return (
     <section className="konamicode">
       <div class="keyboard">
-      <div class="keys">
-        <div data-key="37" class="key"><kbd class="keypress">←</kbd></div>
-        <div data-key="38" class="key"><kbd class="keypress">↑</kbd></div>
-        <div data-key="40" class="key"><kbd class="keypress">↓</kbd></div>
-        <div data-key="39" class="key"><kbd class="keypress">→</kbd></div>
-        <div data-key="65" class="key"><kbd class="keypress">A</kbd></div>
-        <div data-key="66" class="key"><kbd class="keypress">B</kbd></div>
-        <div data-key="13" class="key enter"><kbd class="keypress">START</kbd></div>
+        <div class="keys" >
+          <div data-key="37" class="key"><kbd class="keypress">←</kbd></div>
+          <div data-key="38" class="key"><kbd class="keypress">↑</kbd></div>
+          <div data-key="40" class="key"><kbd class="keypress">↓</kbd></div>
+          <div data-key="39" class="key"><kbd class="keypress">→</kbd></div>
+          <div data-key="65" class="key"><kbd class="keypress">A</kbd></div>
+          <div data-key="66" class="key"><kbd class="keypress">B</kbd></div>
+          <div data-key="13" class="key enter"><kbd class="keypress">START</kbd></div>
+        </div>
       </div>
-    </div>
-    <div class="image-container">
-      <div class="secret"></div>
-      <img src={image} class="ship" alt=""></img>
-    </div>
-  </section>
+      <div class="image-container">
+        <div class="secret"></div>
+        <img src={image} class="ship" alt=""></img>
+      </div>
+    </section>
   );
 };
 
