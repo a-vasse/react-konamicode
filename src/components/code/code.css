@@ -10,6 +10,7 @@ body,html {
 }
 
 .keyboard {
+  display: flex;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -39,7 +40,7 @@ body,html {
   box-shadow: 0 0 1rem #1d1d1d;
 }
 
-.highlight {
+.key:active, .key.pressed {
   transform: scale(1.5);
   border-color: #00a2ff;
   box-shadow: 0 0 1rem #00a2ff;
@@ -49,10 +50,6 @@ body,html {
   font-size: 2rem;
   letter-spacing: .1rem;
   color: #ffffff;
-}
-
-.enter {
-  width: 10rem;
 }
 
 .image-container {
